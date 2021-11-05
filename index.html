@@ -6,41 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Cup</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <header>
-        <nav id=nav-bar>
-            <ul>
+    <header id="header">
+        <nav id="nav-bar">
+            <div id="logo-div">
+                <a href="#">
+                    <img id="header-img" src="image/logo.jpg" width="50" height="50" alt="coffee cup logo">
+                </a>
+            </div>
+
+            <ul id="nav-link-div">
                 <li>
-                    <a href="#"><img id="header-img" src="image/logo.jpg" alt="coffee cup logo"></a>
+                    <a href="#features" class="nav-link">Features</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">Features</a>
+                    <a href="#demo" class="nav-link">How It Works</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">How It Works</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Pricing</a>
+                    <a href="#pricing-section" class="nav-link">Pricing</a>
                 </li>
             </ul>
+
         </nav>
 
-        <h1>Handcrafted, home-made masterpieces</h1>
-        <form action="#">
-            <input type="email" placeholder="Enter your email address">
-            <button type="submit">Get Started</button>
+        <h1 id="title">Handcrafted, home-made masterpieces</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+
+            <input id="email" name="email" class="input-form" type="email" placeholder="Enter your email address"
+                required>
+
+            <br>
+            <input id="submit" class="submit-button btn btn-warning" value="Get Started" type="submit">
         </form>
-
-
     </header>
+    <hr>
     <section id="features">
         <div class="feature-1">
             <div class="feature-1-logo">
-                <img src="image/water-drop.png" alt="#">
+                <img class="img-fluid feature-1-logo" src="image/water-drop.png" alt="#">
             </div>
-            <div class="feature-1-description">
+            <div class="feature-description">
                 <h2>Premium Materials</h2>
                 <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity
                     of your purchase.</p>
@@ -49,9 +64,9 @@
 
         <div class="feature-2">
             <div class="feature-2-logo">
-                <img src="image/delivery-truck.png" alt="#">
+                <img class="img-fluid" src="image/delivery-truck.png" alt="#">
             </div>
-            <div class="feature-2-description">
+            <div class="feature-description">
                 <h2>Fast Shipping</h2>
                 <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide fre
                     returns if you are not satisfied.</p>
@@ -60,9 +75,9 @@
 
         <div class="feature-3">
             <div class="feature-3-logo">
-                <img src="image/battery.png" alt="#">
+                <img class="img-fluid" src="image/battery.png" alt="#">
             </div>
-            <div class="feature-3-description">
+            <div class="feature-description">
                 <h2>Quality Assurance</h2>
                 <p>For every purchase you make, we will ensure there are no damages or faults and we will check and
                     test the pitch of your insturment.</p>
@@ -73,59 +88,76 @@
 
     <section id="demo">
         <div class="video-div">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+            <iframe id="video" class="mb-3" width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>">
+                allowfullscreen></iframe>
         </div>
     </section>
+
+    <hr>
 
     <section id="pricing-section">
-        <div id="pricing-1">
-            <h3>Tenor Trombone</h3>
-            <span class="price">$600</span>
-            <ul class="pricing-description">
-                <li>Lorem</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem</li>
-                <li>ispum</li>
-            </ul>
+        <div class="row pricing-card">
+            <div class="pricing  col col-sm  mb-4 mb-lg-0 ">
+                <h3>Tenor Trombone</h3>
+                <span class="price">$600</span>
+                <ul class="pricing-description">
+                    <li>Lorem</li>
+                    <li>Lorem ipsum </li>
+                    <li>Lorem</li>
+                    <li>ispum</li>
+                </ul>
+                <button class="btn btn-warning mb-3 mt-2" type="button">SELECT</button>
+            </div>
+
+            <div class="pricing  col col-sm mb-4 mb-lg-0">
+                <h3>Bass Trombone</h3>
+                <span class="price">$900</span>
+                <ul class="pricing-description">
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem ispum</li>
+                    <li>ispum</li>
+                </ul>
+                <button class="btn btn-warning mb-3 mt-2" type="button">SELECT</button>
+            </div>
+
+            <div class="pricing  col col-sm mb-4 mb-lg-0">
+                <h3>value Trombone</h3>
+                <span class="price">$1200</span>
+                <ul class="pricing-description">
+                    <li>Lorem</li>
+                    <li>Lorem </li>
+                    <li>Lorem ispum</li>
+                    <li>ispum</li>
+                </ul>
+                <button class="btn btn-warning mb-3 mt-2" type="button">SELECT</button>
+            </div>
         </div>
 
-        <div id="pricing-2">
-            <h3>Tenor Trombone</h3>
-            <span class="price">$900</span>
-            <ul class="pricing-description">
-                <li>Lorem</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem</li>
-                <li>ispum</li>
-            </ul>
-        </div>
-
-        <div id="pricing-3">
-            <h3>Tenor Trombone</h3>
-            <span class="price">$1200</span>
-            <ul class="pricing-description">
-                <li>Lorem</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem</li>
-                <li>ispum</li>
-            </ul>
-        </div>
     </section>
 
-    <footer>
+    <footer id="footer-div">
         <ul>
             <li>Privacy</li>
             <li>Terms</li>
             <li>Contact</li>
         </ul>
+
         <p>Copyright 2021, Original Trombones</p>
     </footer>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
